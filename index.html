@@ -1,45 +1,44 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-  <title>JS Game Challenge</title>
+    <title>JS Game Challenge</title>
     <link rel="stylesheet" href="assets/stylesheets/main.css">
-    <audio id="hitSound" src="assets/audio/gun_44mag_11.wav" preload="auto"></audio>
 </head>
+
 <body>
-  <div class="maindiv">
-    <h1>Hockey, JavaScript, and the DOM oh My!</h1>
-    <h2>...the game!</h2>
-    <div class="reset">
-      <button id="reset">RESET</button><br>
-      NUMBER OF RESETS: <span id="num-resets">0</span>
+    <div class="maindiv">
+        <h1>Hockey, JavaScript, and the DOM oh My!</h1>
+        <h2>...the game!</h2>
+        <div class="reset">
+            <button id="reset">RESET</button><br> NUMBER OF RESETS: <span id="num-resets">0</span>
+        </div>
+        <div class="clear"></div>
+        <div class="left">
+            <h2>
+                Team 1
+            </h2>
+            <div class="hits">
+                SHOTS TAKEN: <span id="teamone-numshots">0</span><br> GOALS: <span id="teamone-numhits">0</span>
+            </div>
+            <div>
+                <button id="teamone-shoot">SHOOT</button>
+            </div>
+        </div>
+        <div class="right">
+            <h2>
+                Team 2
+            </h2>
+            <div class="hits">
+                SHOTS TAKEN: <span id="teamtwo-numshots">0</span><br> GOALS: <span id="teamtwo-numhits">0</span>
+            </div>
+            <div>
+                <button id="teamtwo-shoot">SHOOT</button>
+            </div>
+        </div>
+        <div class="clear"></div>
     </div>
-    <div class="clear"></div>
-    <div class="left">
-      <h2>
-        Team 1
-      </h2>
-      <div class="hits">
-        SHOTS TAKEN: <span id="teamone-numshots">0</span><br>
-        GOALS: <span id="teamone-numhits">0</span>
-      </div>
-      <div>
-        <button id="teamone-shoot">SHOOT</button>
-      </div>
-    </div>
-    <div class="right">
-      <h2>
-        Team 2
-      </h2>
-      <div class="hits">
-        SHOTS TAKEN: <span id="teamtwo-numshots">0</span><br>
-        GOALS: <span id="teamtwo-numhits">0</span>
-      </div>
-      <div>
-        <button id="teamtwo-shoot">SHOOT</button>
-      </div>
-    </div>
-    <div class="clear"></div>
-  </div>
     <script src="assets/javascripts/game.js"></script>
 </body>
+
 </html>

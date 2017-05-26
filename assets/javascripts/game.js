@@ -1,9 +1,9 @@
 "use strict";
 
-(function(){
-  
+(function () {
+
     //make sure the page is loaded
-    window.onload = function(){
+    window.onload = function () {
 
         let reset = document.querySelector("#reset");
         let resetCnt = document.querySelector("#num-resets");
@@ -16,8 +16,9 @@
         let fanFare = new Audio("assets/audio/fanfare_x.wav");
         let missed = new Audio("assets/audio/boing_x.wav");
         let resetSnd = new Audio("assets/audio/cash_register_x.wav")
-        
-        reset.addEventListener("click", function(){
+
+        // set all of the shot counters back to 0 when the reset button is hit
+        reset.addEventListener("click", function () {
             teamOneShots.innerHTML = 0;
             teamTwoShots.innerHTML = 0;
             teamOneHits.innerHTML = 0;
@@ -25,18 +26,19 @@
             resetCnt.innerHTML = parseInt(resetCnt.innerHTML) + 1;
             resetSnd.play();
         });
-        
-        teamOneShoot.addEventListener("click", function(){ 
+
+        teamOneShoot.addEventListener("click", function () {
             checkShot(teamOneShots, teamOneHits);
-//            
+            //            
         });
-        
-        teamTwoShoot.addEventListener("click", function(){
+
+        teamTwoShoot.addEventListener("click", function () {
             checkShot(teamTwoShots, teamTwoHits);
         });
-        
-        function checkShot(shots, hits){
-            shots.innerHTML = parseInt(shots.innerHTML) +1;
+
+        // common method that handles the shot button clicks
+        function checkShot(shots, hits) {
+            shots.innerHTML = parseInt(shots.innerHTML) + 1;
             if ((Math.floor((Math.random() * 1000) + 1) % 2) == 0) {
                 hits.innerHTML = parseInt(hits.innerHTML) + 1;
                 fanFare.play();
@@ -45,5 +47,5 @@
             }
         }
     }
-    
+
 })();
